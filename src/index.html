@@ -1,21 +1,32 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-  <title>您当前所在点位置</title>
-  <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
-  <link rel="stylesheet" href="styles/app.css" />
-  <script src="../bower_components/jquery/dist/jquery.js"></script>
-  <script src="../bower_components/jquery.cookie/jquery.cookie.js"></script>
-  <script src="http://api.map.baidu.com/api?type=quick&ak=NqztsVPjXArIYOqmLPc9g6BT"></script>
-  <script src="baidu.js"></script>
-
-</head>
-<body>
-  <div class="nav">
-    <span class="location" id="location"><i class="iconfont">&#xe608;</i>获取您当前的位置</span>
-  </div>
-  <div class="info" id="info"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <title>您当前所在点位置</title>
+    <!-- build:css ./styles/app.css -->
+    <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../.tmp/styles/app.css" />
+    <!-- buildend -->
+    <!-- build:css ./scripts/index.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery.cookie/jquery.cookie.js"></script>
+    <script src="http://api.map.baidu.com/api?type=quick&ak=NqztsVPjXArIYOqmLPc9g6BT"></script>
+    <script src="scripts/baidu.js"></script>
+    <!-- buildend -->
+  </head>
+  <body>
+    <div class="nav">
+      <span class="location" id="location">上海</span>
+    </div>
+    <dl class="address" id="address">
+      <dt>当前定位</dt>
+      <dd id="current">上海</dd>
+      <dt>热门城市</dt>
+      <dd>北京</dd><dd>上海</dd><dd>深圳</dd>
+      <dt>A</dt>
+      <dd>北京</dd><dd>上海</dd><dd>深圳</dd>
+      <dd>北京</dd><dd>上海</dd><dd>深圳</dd>
+    </dl>
+  </body>
 </html>

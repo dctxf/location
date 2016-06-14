@@ -1,13 +1,15 @@
 window.onload = function() {
 	'use strict';
 	var btn = document.getElementById('location');
-	var info = document.getElementById('info');
+	var address = document.getElementById('address');
+	var current = document.getElementById('current');
 
-	// 百度地图
-	var map = new BMap.Map('container');
+	// 创建百度地图实例
+	var map = new BMap.Map();
 
 	// 按钮点击获取坐标
 	btn.onclick = function(e) {
+		address.style.display = 'block';
 		getLocation();
 		e.stopPropagation();
 		e.preventDefault();
@@ -18,7 +20,7 @@ window.onload = function() {
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(showPosition, showError);
 		} else {
-			info.innerHTML = "该浏览器不支持获取地理位置。";
+			current.innerHTML = '定位失败';
 		}
 	}
 
@@ -39,33 +41,31 @@ window.onload = function() {
 				expires: 7,
 				path: '/'
 			});
-			alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street);
+			// alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street);
+			current.innerHTML = addComp.city.replace('市', '');
+			btn.innerHTML = current.innerHTML;
+			console.log(addComp);
 		});
 	}
 
 	function showError(error) {
 		switch (error.code) {
 			case error.PERMISSION_DENIED:
-				alert("用户拒绝对获取地理位置的请求。");
+				// alert("用户拒绝对获取地理位置的请求。");
+				current.innerHTML = '定位失败';
 				break;
 			case error.POSITION_UNAVAILABLE:
-				alert("位置信息是不可用的。");
+				// alert("位置信息是不可用的。");
+				current.innerHTML = '位置信息不可用';
 				break;
 			case error.TIMEOUT:
-				alert("请求用户地理位置超时。");
+				// alert("请求用户地理位置超时。");
+				current.innerHTML = '请求超时';
 				break;
 			case error.UNKNOWN_ERROR:
-				alert("未知错误。");
+				// alert("未知错误。");
+				current.innerHTML = '未知错误';
 				break;
 		}
 	}
-
-	// google map 定位
-	/*function showPosition(position) {
-		var latlon = position.coords.latitude + "," + position.coords.longitude;
-
-		var img_url = "http://maps.googleapis.com/maps/api/staticmap?center=" + latlon + "&zoom=14&size=400x300&sensor=false";
-
-		document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
-	}*/
 }

@@ -1,0 +1,22 @@
+{
+  "name": "location",
+  "homepage": "https://github.com/dctxf/location",
+  "authors": [
+    "dctxf <dctmz@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "^3.0.0",
+    "jquery.cookie": "jquery-cookie#^1.4.1",
+    "normalize-css": "^4.1.1"
+  }
+}

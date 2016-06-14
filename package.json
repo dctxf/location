@@ -1,19 +1,20 @@
 {
-  "name": "demo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "css-loader": "^0.23.1",
-    "image-webpack-loader": "^1.8.0",
-    "node-sass": "^3.7.0",
-    "sass-loader": "^3.2.0",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
-  }
+	"name": "location",
+	"version": "1.0.0",
+	"description": "利用GPS获取用户当前的地理位置",
+	"main": "gulpfile.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "gulp serve"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dctxf/location.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dctxf/location/issues"
+	},
+	"homepage": "https://github.com/dctxf/location#readme"
 }
