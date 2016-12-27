@@ -1,20 +1,37 @@
 {
-	"name": "location",
-	"version": "1.0.0",
-	"description": "利用GPS获取用户当前的地理位置",
-	"main": "gulpfile.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "gulp serve"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/dctxf/location.git"
-	},
-	"author": "",
-	"license": "ISC",
-	"bugs": {
-		"url": "https://github.com/dctxf/location/issues"
-	},
-	"homepage": "https://github.com/dctxf/location#readme"
+  "name": "location",
+  "version": "1.0.0",
+  "description": "利用GPS获取用户当前的地理位置",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dctxf/location.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dctxf/location/issues"
+  },
+  "homepage": "https://github.com/dctxf/location#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-csscomb": "^3.0.8",
+    "gulp-dest-clean": "^0.5.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-minify-html": "^1.0.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.0.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.1.2",
+    "imagemin-pngquant": "^5.0.0",
+    "my-ip": "^1.1.1"
+  }
 }
